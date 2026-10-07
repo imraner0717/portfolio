@@ -1,0 +1,409 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #172b78,
+        #722b8d,
+        #b62c76
+    );
+}
+
+
+/* ================= PROFILE CARD ================= */
+
+.profile-card {
+    width: 490px;
+    min-height: 850px;
+
+    padding: 28px 34px;
+
+    position: relative;
+
+    text-align: center;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(240, 55, 155, 0.9) 0%,
+            rgba(58, 75, 220, 0.85) 35%,
+            #111a42 48%,
+            #0d1536 100%
+        );
+
+    border: 1px solid rgba(255,255,255,0.35);
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,0.45);
+
+    transition: 0.5s ease;
+}
+
+
+/* Hover card */
+
+.profile-card:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 35px 80px rgba(0,0,0,0.55);
+
+    background:
+        linear-gradient(
+            180deg,
+            #ff3da5 0%,
+            #5d54ed 35%,
+            #151d4c 48%,
+            #0b1230 100%
+        );
+}
+
+
+/* ================= THREE DOTS ================= */
+
+.dots {
+    position: absolute;
+
+    right: 25px;
+    top: 28px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.dots span {
+    width: 7px;
+    height: 7px;
+
+    background: white;
+
+    border-radius: 50%;
+}
+
+
+/* ================= PROFILE IMAGE ================= */
+
+.profile-image {
+    width: 260px;
+    height: 260px;
+
+    margin: 0 auto 25px;
+
+    padding: 7px;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #ff5db7,
+        #a36cff,
+        #4c7cff
+    );
+
+    transition: 0.5s ease;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 5px solid #18173e;
+}
+
+
+/* Image hover */
+
+.profile-card:hover .profile-image {
+    transform: scale(1.06) rotate(2deg);
+
+    box-shadow:
+        0 0 35px rgba(255, 75, 190, 0.7);
+}
+
+
+/* ================= NAME ================= */
+
+h1 {
+    font-size: 40px;
+
+    margin-bottom: 8px;
+
+    color: white;
+}
+
+
+/* ================= JOB TITLE ================= */
+
+h2 {
+    font-size: 23px;
+
+    font-weight: 500;
+
+    color: #f472d0;
+
+    margin-bottom: 25px;
+}
+
+
+/* ================= DESCRIPTION ================= */
+
+.description {
+    font-size: 19px;
+
+    line-height: 1.7;
+
+    color: #d4d9ed;
+
+    margin-bottom: 28px;
+}
+
+
+/* ================= SOCIAL ICONS ================= */
+
+.social-icons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    padding-bottom: 28px;
+
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.social-icons a {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    color: white;
+
+    font-size: 23px;
+
+    text-decoration: none;
+
+    background: rgba(255,255,255,0.08);
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    transition: 0.3s;
+}
+
+
+/* Social hover */
+
+.social-icons a:hover {
+    transform: translateY(-7px) scale(1.1);
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.facebook:hover {
+    background: #1877f2;
+}
+
+.twitter:hover {
+    background: #1da1f2;
+}
+
+.linkedin:hover {
+    background: #0077b5;
+}
+
+.github:hover {
+    background: #333;
+}
+
+.instagram:hover {
+    background: linear-gradient(
+        45deg,
+        #ffdc80,
+        #fcaf45,
+        #e1306c,
+        #833ab4
+    );
+}
+
+
+/* ================= DETAILS ================= */
+
+.details {
+    margin-top: 22px;
+
+    background: rgba(255,255,255,0.05);
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    text-align: left;
+}
+
+.detail {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 17px 20px;
+
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+.detail:last-child {
+    border-bottom: none;
+}
+
+.detail > i {
+    width: 30px;
+
+    color: #ef5bc4;
+
+    font-size: 25px;
+
+    text-align: center;
+}
+
+.detail span {
+    font-size: 16px;
+
+    color: white;
+}
+
+.detail p {
+    margin-top: 4px;
+
+    font-size: 15px;
+
+    color: #c5c9dc;
+}
+
+
+/* ================= BUTTON ================= */
+
+.profile-button {
+    width: 270px;
+
+    height: 62px;
+
+    margin-top: 25px;
+
+    border: none;
+
+    border-radius: 35px;
+
+    cursor: pointer;
+
+    color: white;
+
+    font-size: 20px;
+
+    background: linear-gradient(
+        90deg,
+        #f735a8,
+        #f34cae,
+        #2878ef
+    );
+
+    transition: 0.4s;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.3);
+}
+
+.profile-button:hover {
+    transform: scale(1.06);
+
+    box-shadow:
+        0 10px 35px rgba(238,62,178,0.5);
+}
+
+
+/* Button text */
+
+.hover-text {
+    display: none;
+}
+
+.profile-card:hover .normal-text {
+    display: none;
+}
+
+.profile-card:hover .hover-text {
+    display: inline;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 600px) {
+
+    .profile-card {
+        width: 90%;
+        min-height: auto;
+
+        padding: 25px 20px;
+    }
+
+    .profile-image {
+        width: 190px;
+        height: 190px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 19px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    .social-icons {
+        gap: 10px;
+    }
+
+    .social-icons a {
+        width: 43px;
+        height: 43px;
+
+        font-size: 18px;
+    }
+}
